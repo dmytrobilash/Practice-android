@@ -10,15 +10,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@id/search_fab_button"
+        android:layout_toStartOf="@id/search_fab_button"
+        android:hint="@string/search_article"
         >
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/search_article"
             android:padding="8dp"
             android:layout_margin="8dp"
-            android:inputType="text" />
+            android:inputType="text"
+           />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -38,9 +40,7 @@
         android:layout_below="@id/text_input_layout"
         android:layout_marginTop="8dp"
         android:numColumns="2"
+        android:layout_margin="8dp"
         />
-
-
-
 
 </RelativeLayout>
