@@ -39,7 +39,6 @@
         android:layout_height="match_parent"
         android:layout_below="@id/text_input_layout"
         android:layout_marginTop="8dp"
-        android:numColumns="2"
         android:layout_margin="8dp"
         />
 

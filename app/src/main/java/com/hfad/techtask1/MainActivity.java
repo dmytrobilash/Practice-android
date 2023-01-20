@@ -1,5 +1,6 @@
 package com.hfad.techtask1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -27,6 +28,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.internal.EverythingIsNonNull;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,13 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
         call.enqueue(new Callback<List<Data>>() {
             @Override
+            @EverythingIsNonNull
             public void onResponse(Call<List<Data>> call, Response<List<Data>> response) {
                 //todo if there is not internet connection
                 if (response.isSuccessful()) {
-                    Log.v("TAG",  response.body().toString());
                     customAdapter = new CustomAdapter(response.body(), MainActivity.this);
                     gridView.setAdapter(customAdapter);
-
                 } else {
                     Toast.makeText(MainActivity.this, "Failure (On response)", Toast.LENGTH_LONG).show();
                 }

@@ -1,5 +1,6 @@
 package com.hfad.techtask1.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -40,6 +41,7 @@ public class CustomAdapter extends BaseAdapter {
         return i;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View getView(int i, View convertView, ViewGroup viewGroup) {
 
@@ -56,7 +58,13 @@ public class CustomAdapter extends BaseAdapter {
                 .into(imageView);
         publishedAt.setText(dataList.get(i).getPublishedAt());
         header.setText(dataList.get(i).getTitle());
-        subText.setText(dataList.get(i).getSummary());
+        String temp;
+        temp = dataList.get(i)
+                .getSummary();
+        temp = (String) temp.subSequence(0, 20);
+        temp += "...";
+
+        subText.setText(temp);
 
         return view;
     }

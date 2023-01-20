@@ -45,6 +45,7 @@ public class Data {
     }
 
     public String getSummary() {
+
         return summary;
     }
 
