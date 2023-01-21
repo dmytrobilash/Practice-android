@@ -20,6 +20,28 @@ public class Data {
     public String newsSite;
     public String updatedAt;
 
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String url;
+
     public String getNewsSite() {
         return newsSite;
     }

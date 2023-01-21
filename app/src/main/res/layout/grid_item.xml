@@ -39,10 +39,9 @@
         android:layout_height="wrap_content"
         android:drawableEnd="@mipmap/ic_arrow"
         android:textColor="#000000"
-        android:id="@+id/ButtonTest"
+        android:id="@+id/grid_button"
         android:text="@string/read_more"
         android:background="@color/white"
-        android:onClick="onClick"
         android:layout_gravity="start|center"
         android:layout_marginBottom="40dp"/>
 
