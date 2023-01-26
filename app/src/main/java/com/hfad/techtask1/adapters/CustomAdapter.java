@@ -14,10 +14,15 @@ import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 import com.hfad.techtask1.R;
 import com.hfad.techtask1.model.Data;
 
 import java.util.List;
+
+import okhttp3.internal.cache.CacheStrategy;
 
 public class CustomAdapter extends BaseAdapter {
 
@@ -45,7 +50,6 @@ public class CustomAdapter extends BaseAdapter {
         return i;
     }
 
-    @SuppressLint("SetTextI18n")
     @Override
     public View getView(int i, View convertView, ViewGroup viewGroup) {
 
@@ -60,10 +64,13 @@ public class CustomAdapter extends BaseAdapter {
             public void onClick(View v) {
                 ((GridView) viewGroup).performItemClick(v, i, 0);
             }});
-
+        RequestOptions requestOptions = RequestOptions.fitCenterTransform().transform(new RoundedCorners(5))
+                .diskCacheStrategy(DiskCacheStrategy.ALL);
         Glide.with(context)
                 .load(dataList.get(i)
                         .getImageUrl())
+                .thumbnail(0.25f)
+                .apply(requestOptions)
                 .into(imageView);
         publishedAt.setText(dataList.get(i).getPublishedAt());
         header.setText(dataList.get(i).getTitle());

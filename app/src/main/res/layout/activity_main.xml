@@ -30,8 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:contentDescription="@string/search_fab_button"
-        android:src="@mipmap/ic_search"
-        />
+        android:src="@android:drawable/ic_menu_search"
+        app:rippleColor="@color/white"
+        app:fabCustomSize="40dp"/>
 
     <GridView
         android:id="@+id/grid"
