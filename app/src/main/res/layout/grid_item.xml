@@ -3,17 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:tool="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/element_design">
 
-    <android.widget.ImageView
+    <ImageView
         android:id="@+id/grid_image"
         android:layout_width="wrap_content"
         android:layout_height="300dp"
         android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
+        android:scaleType="fitXY"
         android:background="@drawable/circle"
+        android:padding="3dp"
+        android:layout_margin="3dp"
         android:contentDescription="@string/grid_image" />
 
     <TextView
@@ -22,20 +23,23 @@
         android:layout_height="wrap_content"
         android:lines="1"
         android:text=""
-        android:layout_gravity="start" />
+        android:layout_gravity="start"
+        android:layout_margin="4dp"/>
 
     <TextView
         android:id="@+id/grid_header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="start" />
+        android:layout_gravity="start"
+        android:layout_margin="4dp"/>
 
     <TextView
         android:id="@+id/grid_lower_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:textAlignment="inherit"/>
+        android:textAlignment="inherit"
+        android:layout_margin="4dp"/>
 
     <android.widget.Button
         android:layout_width="wrap_content"
@@ -45,7 +49,6 @@
         android:text="@string/read_more"
         android:background="@drawable/button_design"
         android:layout_gravity="center"
-        android:layout_marginBottom="10dp"/>
-
+        android:layout_marginBottom="10dp" />
 
 </LinearLayout>
