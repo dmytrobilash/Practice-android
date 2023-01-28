@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.MainActivity">
+    android:background="@color/background"
+    tools:context=".views.MainActivity"
+    >
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toStartOf="@id/search_fab_button"
+        android:layout_marginTop="8dp"
         android:hint="@string/search_article"
         >
         <com.google.android.material.textfield.TextInputEditText
@@ -20,6 +23,7 @@
             android:padding="8dp"
             android:layout_margin="8dp"
             android:inputType="text"
+            android:background="@color/background"
            />
 
     </com.google.android.material.textfield.TextInputLayout>

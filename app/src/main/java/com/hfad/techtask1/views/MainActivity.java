@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     GridView gridView;
     EditText editText;
     CustomAdapter customAdapter;
-    AppCompatButton button1;
+    Button  button1;
     public static  List<Data> dataList;
 
 

@@ -3,14 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/element_design">
 
-    <ImageView
+    <android.widget.ImageView
         android:id="@+id/grid_image"
         android:layout_width="wrap_content"
         android:layout_height="300dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
+        android:background="@drawable/circle"
         android:contentDescription="@string/grid_image" />
 
     <TextView
@@ -19,7 +22,7 @@
         android:layout_height="wrap_content"
         android:lines="1"
         android:text=""
-        android:layout_gravity="start"/>
+        android:layout_gravity="start" />
 
     <TextView
         android:id="@+id/grid_header_text"
@@ -34,16 +37,15 @@
         android:layout_gravity="start"
         android:textAlignment="inherit"/>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <android.widget.Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableEnd="@mipmap/ic_arrow"
         android:textColor="#000000"
         android:id="@+id/grid_button"
         android:text="@string/read_more"
-        android:background="@color/white"
-        android:layout_gravity="start|center"
-        android:layout_marginBottom="40dp"/>
+        android:background="@drawable/button_design"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"/>
 
 
 </LinearLayout>

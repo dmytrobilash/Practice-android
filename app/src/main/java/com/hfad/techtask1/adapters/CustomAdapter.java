@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -54,7 +55,7 @@ public class CustomAdapter extends BaseAdapter {
     public View getView(int i, View convertView, ViewGroup viewGroup) {
 
         View view  = LayoutInflater.from(context).inflate(R.layout.grid_item, null);
-        AppCompatButton appCompatButton = view.findViewById(R.id.grid_button);
+        Button appCompatButton = view.findViewById(R.id.grid_button);
         TextView header = view.findViewById(R.id.grid_header_text);
         TextView publishedAt = view.findViewById(R.id.grid_date);
         TextView subText = view.findViewById(R.id.grid_lower_text);
