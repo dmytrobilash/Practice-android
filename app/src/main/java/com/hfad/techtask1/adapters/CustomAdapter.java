@@ -65,7 +65,7 @@ public class CustomAdapter extends BaseAdapter {
             public void onClick(View v) {
                 ((GridView) viewGroup).performItemClick(v, i, 0);
             }});
-        RequestOptions requestOptions = RequestOptions.fitCenterTransform().transform(new RoundedCorners(100))
+        RequestOptions requestOptions = RequestOptions.fitCenterTransform().transform(new RoundedCorners(90))
                 .diskCacheStrategy(DiskCacheStrategy.ALL);
         Glide.with(context)
                 .load(dataList.get(i)

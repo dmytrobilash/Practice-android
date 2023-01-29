@@ -13,42 +13,52 @@
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         android:background="@drawable/circle"
-        android:padding="3dp"
-        android:layout_margin="3dp"
+        android:padding="2dp"
+        android:layout_margin="2dp"
         android:contentDescription="@string/grid_image" />
 
     <TextView
         android:id="@+id/grid_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_margin="4dp"
+        android:fontFamily="sans-serif-black"
         android:lines="1"
         android:text=""
-        android:layout_gravity="start"
-        android:layout_margin="4dp"/>
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/grid_header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_margin="4dp"/>
+        android:layout_margin="4dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/grid_lower_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:layout_margin="4dp"
+        android:fontFamily="sans-serif-black"
         android:textAlignment="inherit"
-        android:layout_margin="4dp"/>
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
     <android.widget.Button
+        android:id="@+id/grid_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:id="@+id/grid_button"
-        android:text="@string/read_more"
-        android:background="@drawable/button_design"
         android:layout_gravity="center"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_design"
+        android:text="@string/read_more"
+        android:textColor="#000000"
+        android:textSize="14sp" />
 
 </LinearLayout>
